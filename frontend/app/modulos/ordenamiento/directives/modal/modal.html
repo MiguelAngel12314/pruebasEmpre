@@ -1,0 +1,63 @@
+<!-- Modal -->
+<div class="modal fade" id="ModalNumeros" tabindex="-1" role="dialog" aria-labelledby="modalProfile" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Agregar lista de números</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" ng-form="vm.form">
+		      <div class="form-group">
+			    <label for="numero1">Número 1</label>
+			    <input type="text" 
+			    	   class="form-control" 
+			    	   id="numero1" 
+			    	   name="numero1" 
+			    	   ng-pattern = "/^-?(?:0?[1-9]\d*|0)$/"
+			    	   placeholder="Primer número" 
+			    	   ng-model="vm.numeros.numero1" required>
+			    <small class="form-text text-danger" ng-show="vm.required && vm.form.numero1.$invalid">Requerido y solo números</small>
+			  </div>
+			  <div class="form-group">
+			    <label for="numero2">Número 2</label>
+			    <input type="text" 
+			    	   class="form-control" 
+			    	   id="numero2" 
+			    	   name="numero2" 
+			    	   ng-pattern = "/^-?(?:0?[1-9]\d*|0)$/"
+			    	   placeholder="Segundo número"
+			    	    ng-model="vm.numeros.numero2" required>
+			    <small class="form-text text-danger" ng-show="vm.required && vm.form.numero2.$invalid">Requerido y solo números</small>
+			  </div>
+			  <div class="form-group">
+			    <label for="numero3">Número 3</label>
+			    <input type="text" 
+			    	   class="form-control" 
+			    	   id="numero3" 
+			    	   name="numero3" 
+			    	   placeholder="Tercer número" 
+			    	   ng-pattern = "/^-?(?:0?[1-9]\d*|0)$/"
+			    	   ng-model="vm.numeros.numero3" required>
+			    <small class="form-text text-danger" ng-show="vm.required && vm.form.numero3.$invalid">Requerido y solo números</small>
+
+			  </div>
+			  <div class="form-group">
+			    <label for="numero4">Número 4</label>
+			    <input type="text" 
+			    	   class="form-control" 
+			    	   id="numero4" 
+			    	   name="numero4" 
+			    	   ng-pattern = "/^-?(?:0?[1-9]\d*|0)$/"
+			    	   placeholder="Cuarto número" 
+			    	   ng-model="vm.numeros.numero4" required>
+			    <small class="form-text text-danger" ng-show="vm.required && vm.form.numero4.$invalid">Requerido y solo números</small>
+			  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="vm.guardar()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>

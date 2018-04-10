@@ -1,0 +1,43 @@
+<div class="row" style="padding-top: 30px;">
+	<div class="col-md-8 col-sm-10">
+		<div class="form-group text-right">
+		</div>
+	</div>
+	<div class="col-md-4 col-sm-2">
+	    <button class="btn btn-primary" 
+	    		type="button" 
+	    		title="Agregar lista de números"
+	    		data-toggle="modal" 
+	    		data-target="#ModalNumeros">
+	     <i class="fas fa-plus" style="font-size: 43px;"></i> 
+	    </button>
+	</div>
+</div>
+<div class="row" style="padding-top: 23px;">
+	<div class="col col-md-12">
+		<table class="table table-hover">
+			<thead class="thead-dark">
+				<th>No. 1</th>
+				<th>No. 2</th>
+				<th>No. 3</th>
+				<th>No. 4</th>
+				<th>Ordenado</th>
+
+			</thead>
+			<tbody>
+				<tr ng-repeat="datos in vm.datos"> 
+					<td>{{datos.numeros.numero1}}</td>
+					<td>{{datos.numeros.numero2}}</td>
+					<td>{{datos.numeros.numero3}}</td>
+					<td>{{datos.numeros.numero4}}</td>
+					<td>{{datos.ordenados}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="col col-md-6">		
+		<div id="container"></div>
+	</div>
+</div>
+<!-- Modal numero -->
+<modal-numeros></modal-numeros>
